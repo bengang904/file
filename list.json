@@ -3,6 +3,6 @@
         "title": "python_code",
         "desc": "包含 python 代码示例",
         "cover": "images/python_code.png",
-        "file": "files/python_code.7z"
+        "file": "./files/python_code.7z"
     }
 ]

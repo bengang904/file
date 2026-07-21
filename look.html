@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>资源</title>
+    <title>资源加载</title>
     <style>
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -42,22 +42,73 @@
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
         }
 
-        .entry-dir { cursor: pointer; margin: 2px 0; padding: 8px 10px; transition: background-color 0.2s; border-radius: 6px; }
-        .entry-dir:hover { background-color: #e3f2fd; }
+        .entry-dir { 
+            cursor: pointer; 
+            margin: 2px 0; 
+            padding: 8px 10px; 
+            transition: background-color 0.2s; 
+            border-radius: 6px; 
+            max-width: 100%;
+            box-sizing: border-box;
+            word-break: break-all; 
+        } 
+        .entry-dir:hover { 
+            background-color: #e3f2fd; 
+        }
         .dir-name { font-weight: 600; color: #1e40af; display: flex; align-items: center; }
         .dir-icon { margin-right: 10px; font-size: 1.1em; color: #4b5563; width: 15px; text-align: center; }
         .dir-content { padding-left: 25px; border-left: 1px dashed #bfdbfe; margin-left: 15px; display: none; }
-        .entry-file { cursor: pointer; padding: 8px 20px; margin: 2px 0; color: #0369a1; transition: background-color 0.2s; border-radius: 6px; }
-        .entry-file:hover { background-color: #f0f9ff; }
-
-        #preview {
-            margin-top: 30px; padding: 25px; background-color: #ffffff; border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); border-top: 5px solid #1e3a8a; display: none; 
+        .entry-file { 
+            cursor: pointer; 
+            padding: 8px 20px; 
+            margin: 2px 0; 
+            color: #0369a1; 
+            transition: background-color 0.2s; 
+            border-radius: 6px; 
+            word-break: break-all; 
         }
-        #preview h4 { margin-top: 0; color: #1e3a8a; border-bottom: 1px solid #eee; padding-bottom: 10px; font-size: 1.2em; }
-        pre { white-space: pre-wrap; background:#f3f4f6; padding:15px; border-radius:8px; border: 1px solid #e5e7eb; font-size: 0.9em; }
-        img { display: block; max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 6px; }
+          .entry-file:hover { background-color: #f0f9ff; }
 
+       #preview {
+            margin-top: 30px; 
+            padding: 25px; 
+            background-color: #ffffff; 
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
+            border-top: 5px solid #1e3a8a; 
+            display: none;
+            box-sizing: border-box; 
+            max-width: 100%;
+            overflow-x: hidden; 
+        }
+        #preview h4 { 
+            margin-top: 0; 
+            color: #1e3a8a; 
+            border-bottom: 1px solid #eee; 
+            padding-bottom: 10px; 
+            font-size: 1.2em; 
+            word-break: break-all; 
+        }
+        pre { 
+            white-space: pre-wrap;       
+            word-wrap: break-word;       
+            word-break: break-all;      
+            overflow-x: auto;           
+            max-width: 100%;            
+            box-sizing: border-box;
+            background: #f3f4f6; 
+            padding: 15px; 
+            border-radius: 8px; 
+            border: 1px solid #e5e7eb; 
+            font-size: 0.9em; 
+        } 
+        img { 
+            display: block; 
+            max-width: 100%; 
+            height: auto; 
+            border: 1px solid #ddd; 
+            border-radius: 6px; 
+        }
         .download-menu {
             position: fixed; background: white; border: 1px solid #ccc; padding: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             border-radius: 8px; z-index: 1000; display: none;
